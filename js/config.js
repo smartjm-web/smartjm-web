@@ -9,10 +9,10 @@ window.SMARTJM_CONFIG = {
   // ⚠️ CAMBIAR: número de WhatsApp del vendedor.
   // Formato: indicativo del país + número, sin "+", espacios ni guiones.
   // Ejemplo Colombia: "573001234567"
-  whatsappNumber: "573000000000",
+  whatsappNumber: "573142718839",
 
   // Texto visible del número (solo para mostrar en la página)
-  whatsappDisplay: "300 000 0000",
+  whatsappDisplay: "314 271 8839",
 
   city: "Colombia",
   email: "ventas@smartjm.co", // ⚠️ CAMBIAR
