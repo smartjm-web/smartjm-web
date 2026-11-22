@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iPhone Duo · SmartJM | Tecnología a tu alcance</title>
+  <meta name="description" content="Pide tu iPhone Duo en SmartJM. El primer iPhone que se abre. Elige color y capacidad, haz tu pedido y te atendemos por WhatsApp. Envíos a toda Colombia.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="iPhone Duo · SmartJM">
+  <meta property="og:description" content="El primer iPhone que se abre. Haz tu pedido por WhatsApp.">
+  <meta property="og:image" content="assets/duo/duo-render-cielo-nocturno-1200.webp">
+  <link rel="icon" href="assets/logo-smartjm.png">
+  <link rel="preload" as="image" href="assets/duo/duo-portada-poster.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Barra superior ===== -->
+  <div class="announce">
+    <span>Envíos a toda Colombia</span><span class="sep">·</span>
+    <span>Pedidos por WhatsApp</span><span class="sep hide-sm">·</span>
+    <span class="hide-sm">Pago contra entrega</span>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="SmartJM inicio">
+        <img src="assets/logo-smartjm.png" alt="SmartJM · Tecnología a tu alcance" width="396" height="140">
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#elige">Comprar</a>
+        <a href="#pantalla">Pantalla</a>
+        <a href="#diseno">Diseño</a>
+        <a href="#camaras">Cámaras</a>
+        <a href="#como-pedir">Cómo pedir</a>
+        <a href="#faq">Preguntas</a>
+      </nav>
+      <div class="header__actions">
+        <button class="btn btn--lime btn--sm" data-open-order>Hacer pedido</button>
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Portada ===== -->
+    <section class="portada" aria-labelledby="t-portada">
+      <div class="container portada__text">
+        <span class="badge" data-status-badge>Preventa · Pedidos abiertos</span>
+        <h1 id="t-portada">iPhone Duo.</h1>
+        <p class="portada__sub">El primer iPhone que se abre.</p>
+        <p class="portada__meta">5,4" cerrado · 7,6" abierto · Chip A20 Pro · Dos cámaras de 48 MP</p>
+        <div class="portada__price">Desde <strong data-from-price>$0</strong></div>
+        <div class="cta-row">
+          <a href="#elige" class="btn btn--lime btn--lg">Hacer mi pedido</a>
+          <button class="btn btn--outline btn--lg" data-whatsapp-direct>
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+            Hablar con un asesor
+          </button>
+        </div>
+      </div>
+      <figure class="portada__media">
+        <video class="scene" data-scene autoplay muted playsinline preload="auto"
+               poster="assets/duo/duo-portada-poster.webp" width="1480" height="1140"
+               aria-label="Dos manos sostienen el iPhone Duo cerrado y lo abren hasta su pantalla grande">
+          <source media="(max-width: 734px)" src="assets/duo/duo-portada-movil.mp4" type="video/mp4">
+          <source src="assets/duo/duo-portada.mp4" type="video/mp4">
+        </video>
+      </figure>
+    </section>
+
+    <!-- ===== Configurador / Elige ===== -->
+    <section class="seccion seccion--gris" id="elige" aria-labelledby="t-elige">
+      <div class="container">
+        <header class="head">
+          <h2 id="t-elige">Elige tu iPhone Duo.</h2>
+          <p>Color, capacidad y cantidad. Tu pedido llega directo a nuestro WhatsApp.</p>
+        </header>
+
+        <div class="buy">
+          <div class="buy__gallery">
+            <div class="buy__stage">
+              <img data-main-image src="assets/duo/duo-render-cielo-nocturno-1200.webp" width="1200" height="800" alt="iPhone Duo en color Cielo nocturno, cerrado y abierto">
+            </div>
+            <div class="thumbs" data-thumbs role="list"></div>
+          </div>
+
+          <div class="buy__panel">
+            <span class="badge" data-status-badge>Preventa · Pedidos abiertos</span>
+            <h3 class="buy__title">iPhone Duo</h3>
+            <p class="tenue">Equipo nuevo y sellado. Factura electrónica y garantía por escrito.</p>
+
+            <div class="price">
+              <div class="price__main" data-price>$0</div>
+              <div class="price__sub" data-deposit-line></div>
+            </div>
+
+            <div class="opt">
+              <div class="opt__label">Color · <strong data-color-name></strong></div>
+              <div class="swatches" data-colors></div>
+            </div>
+
+            <div class="opt">
+              <div class="opt__label">Capacidad</div>
+              <div class="caps" data-capacities></div>
+            </div>
+
+            <div class="opt opt--row">
+              <div class="opt__label">Cantidad</div>
+              <div class="qty">
+                <button type="button" data-qty="-1" aria-label="Restar">−</button>
+                <span data-qty-value aria-live="polite">1</span>
+                <button type="button" data-qty="1" aria-label="Sumar">+</button>
+              </div>
+            </div>
+
+            <button class="btn btn--lime btn--lg btn--block" data-open-order>Hacer mi pedido</button>
+            <p class="fine">Al enviar tu pedido se abre WhatsApp con el resumen listo. Un asesor confirma disponibilidad, precio final y envío.</p>
+
+            <ul class="ticks">
+              <li>Envío a toda Colombia o recoges en tienda</li>
+              <li>Pago contra entrega, transferencia o tarjeta</li>
+              <li>Solo eSIM · Desbloqueo con Touch ID</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Pantalla ===== -->
+    <section class="nov nov--blanco nov--lado" id="pantalla" aria-labelledby="t-pantalla">
+      <div class="container nov__grid">
+        <div class="nov__text">
+          <span class="eyebrow">Pantalla</span>
+          <h2 id="t-pantalla">7,6 pulgadas abierto.</h2>
+          <p>Ciérralo y es un iPhone de 5,4" que cabe en cualquier bolsillo. Ábrelo y tienes una pantalla casi de tablet para ver, leer y trabajar.</p>
+          <ul class="facts">
+            <li><strong>5,4"</strong><span>cerrado</span></li>
+            <li><strong>7,6"</strong><span>abierto</span></li>
+          </ul>
+        </div>
+        <figure class="nov__media" style="--ar:1100/870">
+          <video class="scene" data-scene muted playsinline preload="none" poster="assets/duo/duo-pantalla-poster.webp" width="1100" height="870" aria-label="La pantalla interior del iPhone Duo se enciende">
+            <source media="(max-width: 734px)" src="assets/duo/duo-pantalla-movil.mp4" type="video/mp4">
+            <source src="assets/duo/duo-pantalla.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Diseño / Bisagra ===== -->
+    <section class="nov nov--gris" id="diseno" aria-labelledby="t-diseno">
+      <div class="container">
+        <header class="head">
+          <span class="eyebrow">Diseño</span>
+          <h2 id="t-diseno">Titanio que se pliega.</h2>
+          <p>Solo 5,2 mm de grosor abierto y 11,3 mm cerrado. Resistente al agua IP68, hasta 6 m durante 30 minutos.</p>
+        </header>
+        <figure class="nov__media nov__media--wide" style="--ar:1600/444">
+          <video class="scene" data-scene muted playsinline preload="none" poster="assets/duo/duo-bisagra-poster.webp" width="1600" height="444" aria-label="El iPhone Duo se pliega visto de perfil">
+            <source media="(max-width: 734px)" src="assets/duo/duo-bisagra-movil.mp4" type="video/mp4">
+            <source src="assets/duo/duo-bisagra.mp4" type="video/mp4">
+          </video>
+        </figure>
+        <ul class="facts facts--center">
+          <li><strong>5,2 mm</strong><span>abierto</span></li>
+          <li><strong>11,3 mm</strong><span>cerrado</span></li>
+          <li><strong>254 g</strong><span>peso</span></li>
+          <li><strong>IP68</strong><span>agua y polvo</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Posturas ===== -->
+    <section class="nov nov--blanco" id="posturas" aria-labelledby="t-posturas">
+      <div class="container">
+        <header class="head">
+          <span class="eyebrow">Versátil</span>
+          <h2 id="t-posturas">Un iPhone. Varias posturas.</h2>
+          <p>Ponlo como reloj de mesa, ábrelo como un libro o apóyalo para ver videos sin sostenerlo.</p>
+        </header>
+        <figure class="nov__media nov__media--wide" style="--ar:1600/482">
+          <video class="scene" data-scene muted playsinline preload="none" poster="assets/duo/duo-posturas-poster.webp" width="1600" height="482" aria-label="El iPhone Duo en tres posturas distintas">
+            <source media="(max-width: 734px)" src="assets/duo/duo-posturas-movil.mp4" type="video/mp4">
+            <source src="assets/duo/duo-posturas.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Cámaras ===== -->
+    <section class="nov nov--oscuro" id="camaras" aria-labelledby="t-camaras">
+      <div class="container">
+        <header class="head">
+          <span class="eyebrow">Cámaras</span>
+          <h2 id="t-camaras">48 MP. Dos cámaras Fusion.</h2>
+          <p>Toma fotos con la cámara principal mientras la persona se ve en la pantalla exterior. Selfies con calidad de cámara trasera.</p>
+        </header>
+        <figure class="nov__media nov__media--card" style="--ar:1600/904">
+          <video class="scene" data-scene muted playsinline preload="none" poster="assets/duo/duo-camara-poster.webp" width="1600" height="904" aria-label="Una persona toma una foto con el iPhone Duo">
+            <source media="(max-width: 734px)" src="assets/duo/duo-camara-movil.mp4" type="video/mp4">
+            <source src="assets/duo/duo-camara.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Batería ===== -->
+    <section class="nov nov--gris nov--lado nov--inverso" id="bateria" aria-labelledby="t-bateria">
+      <div class="container nov__grid">
+        <div class="nov__text">
+          <span class="eyebrow">Batería</span>
+          <h2 id="t-bateria">Dos baterías.</h2>
+          <p>Una en cada mitad. Hasta 44 horas de video con la pantalla exterior y 31 horas con la interior.</p>
+          <ul class="facts">
+            <li><strong>44 h</strong><span>pantalla exterior</span></li>
+            <li><strong>31 h</strong><span>pantalla interior</span></li>
+          </ul>
+        </div>
+        <figure class="nov__media nov__media--compact" style="--ar:1000/812">
+          <video class="scene" data-scene muted playsinline preload="none" poster="assets/duo/duo-bateria-poster.webp" width="1000" height="812" aria-label="Indicador de carga de batería">
+            <source media="(max-width: 734px)" src="assets/duo/duo-bateria-movil.mp4" type="video/mp4">
+            <source src="assets/duo/duo-bateria.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Chip ===== -->
+    <section class="nov nov--blanco nov--lado" id="chip" aria-labelledby="t-chip">
+      <div class="container nov__grid">
+        <div class="nov__text">
+          <span class="eyebrow">Rendimiento</span>
+          <h2 id="t-chip">A20 Pro.</h2>
+          <p>El chip más rápido de Apple mueve juegos, edición y multitarea en la pantalla grande sin esfuerzo.</p>
+          <ul class="facts">
+            <li><strong>Touch ID</strong><span>botón lateral</span></li>
+            <li><strong>eSIM</strong><span>sin SIM física</span></li>
+          </ul>
+        </div>
+        <figure class="nov__media nov__media--compact" style="--ar:1100/836">
+          <video class="scene" data-scene muted playsinline preload="none" poster="assets/duo/duo-chip-poster.webp" width="1100" height="836" aria-label="Un juego corre en la pantalla grande del iPhone Duo">
+            <source media="(max-width: 734px)" src="assets/duo/duo-chip-movil.mp4" type="video/mp4">
+            <source src="assets/duo/duo-chip.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Cómo pedir ===== -->
+    <section class="seccion seccion--gris" id="como-pedir" aria-labelledby="t-pedir">
+      <div class="container">
+        <header class="head">
+          <h2 id="t-pedir">Cómo hacer tu pedido.</h2>
+          <p>Sin carritos ni registros. Cuatro pasos y listo.</p>
+        </header>
+        <ol class="steps">
+          <li class="step"><span class="step__n">1</span><h3>Elige tu iPhone Duo</h3><p>Color, capacidad y cantidad.</p></li>
+          <li class="step"><span class="step__n">2</span><h3>Llena tus datos</h3><p>Nombre, ciudad, dirección y cómo quieres pagar.</p></li>
+          <li class="step"><span class="step__n">3</span><h3>Envía por WhatsApp</h3><p>Se abre el chat con tu orden y su número.</p></li>
+          <li class="step"><span class="step__n">4</span><h3>Recíbelo</h3><p>Confirmamos, despachamos y pagas como elegiste.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Pagos ===== -->
+    <section class="seccion" id="pagos" aria-labelledby="t-pagos">
+      <div class="container">
+        <header class="head">
+          <h2 id="t-pagos">Págalo como te quede mejor.</h2>
+          <p>Elige el método al hacer tu pedido. Te confirmamos todo por WhatsApp.</p>
+        </header>
+        <div class="cards">
+          <article class="card"><span class="card__ico">📦</span><h3>Contra entrega</h3><p>Pagas el equipo al recibirlo. Sujeto a cobertura de la transportadora.</p></article>
+          <article class="card"><span class="card__ico">🏦</span><h3>Transferencia</h3><p>Bancolombia, Nequi o Daviplata. Te enviamos los datos por WhatsApp.</p></article>
+          <article class="card"><span class="card__ico">💳</span><h3>Tarjeta</h3><p>Débito o crédito, con link de pago seguro.</p></article>
+          <article class="card"><span class="card__ico">🔒</span><h3>Sepáralo con abono</h3><p data-deposit-card>Aparta tu equipo al precio de hoy y paga el saldo al recibir.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Garantía ===== -->
+    <section class="seccion seccion--gris" id="garantia" aria-labelledby="t-garantia">
+      <div class="container garantia">
+        <div>
+          <h2 id="t-garantia">Compra tranquilo.</h2>
+          <p class="tenue">Cada equipo sale con factura electrónica y garantía por escrito. Si algo pasa, nos escribes y te acompañamos en todo el proceso.</p>
+          <ul class="ticks ticks--lg">
+            <li>Equipos nuevos, sellados y originales.</li>
+            <li>Garantía de fábrica más respaldo directo de SmartJM.</li>
+            <li>Derecho de retracto en compras a distancia (Ley 1480).</li>
+            <li>Si separaste con abono y te arrepientes, te lo devolvemos completo.</li>
+          </ul>
+        </div>
+        <div class="garantia__logo">
+          <img src="assets/logo-smartjm.png" alt="SmartJM · Tecnología a tu alcance" loading="lazy" width="396" height="140">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="seccion" id="faq" aria-labelledby="t-faq">
+      <div class="container container--narrow">
+        <header class="head">
+          <h2 id="t-faq">Preguntas frecuentes.</h2>
+        </header>
+        <div class="faq">
+          <details><summary>¿Cómo funciona el pedido?</summary><p>Eliges tu iPhone Duo, llenas tus datos y al enviar se abre WhatsApp con tu orden lista. Un asesor te confirma disponibilidad, precio final, envío y forma de pago.</p></details>
+          <details><summary>¿Hacen envíos a mi ciudad?</summary><p>Enviamos a toda Colombia con transportadora. A ciudades principales suele tardar de 1 a 3 días hábiles.</p></details>
+          <details><summary>¿Puedo pagar contra entrega?</summary><p>Sí, en los destinos donde la transportadora lo permite. Te confirmamos el costo del envío antes de despachar.</p></details>
+          <details><summary>¿El iPhone Duo usa SIM física?</summary><p>No. Funciona solo con eSIM. Te ayudamos a activarla con tu operador.</p></details>
+          <details><summary>¿Tiene Face ID?</summary><p>No. Se desbloquea con Touch ID, en el botón lateral.</p></details>
+          <details><summary>¿El precio puede cambiar?</summary><p>Los precios dependen del dólar y del inventario. Si separas tu equipo con abono, te respetamos el precio del día.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cierre ===== -->
+    <section class="cierre" aria-labelledby="t-cierre">
+      <div class="container cierre__inner">
+        <img src="assets/duo/duo-render-cielo-nocturno-700.webp" alt="" width="700" height="467" loading="lazy">
+        <h2 id="t-cierre">¿Listo para abrir tu iPhone Duo?</h2>
+        <p>Haz tu pedido ahora y te atendemos por WhatsApp.</p>
+        <div class="cta-row cta-row--center">
+          <button class="btn btn--lime btn--lg" data-open-order>Hacer mi pedido</button>
+          <button class="btn btn--ghost-dark btn--lg" data-whatsapp-direct>Escribir por WhatsApp</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#top" class="logo logo--footer" aria-label="SmartJM">
+          <img src="assets/logo-smartjm.png" alt="SmartJM · Tecnología a tu alcance" width="396" height="140" loading="lazy">
+        </a>
+      </div>
+      <div>
+        <h4>Comprar</h4>
+        <a href="#elige">iPhone Duo</a>
+        <a href="#como-pedir">Cómo pedir</a>
+        <a href="#pagos">Medios de pago</a>
+      </div>
+      <div>
+        <h4>Ayuda</h4>
+        <a href="#garantia">Garantía</a>
+        <a href="#faq">Preguntas frecuentes</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="#" data-whatsapp-direct>WhatsApp · <span data-wa-display></span></a>
+        <a href="#" data-email></a>
+      </div>
+    </div>
+    <div class="container footer__legal">
+      <p>© <span data-year></span> SmartJM. Todos los derechos reservados.</p>
+      <p>SmartJM no es una tienda oficial de Apple. iPhone es una marca registrada de Apple Inc. Imágenes de referencia.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Botón flotante WhatsApp ===== -->
+  <button class="wa-float" data-whatsapp-direct aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+  </button>
+
+  <!-- ===== Modal de pedido ===== -->
+  <div class="modal" id="orderModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-order></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+      <button class="modal__close" data-close-order aria-label="Cerrar">×</button>
+
+      <div data-order-step="form">
+        <h2 id="orderTitle">Completa tu pedido</h2>
+        <p class="tenue small">Revisa tu equipo y llena tus datos. Al final se abrirá WhatsApp con la orden.</p>
+
+        <div class="summary" data-summary></div>
+
+        <form id="orderForm" novalidate>
+          <div class="grid-2">
+            <label class="field"><span>Nombre completo *</span>
+              <input name="nombre" autocomplete="name" required placeholder="Ej: Juan Pérez"></label>
+            <label class="field"><span>Celular / WhatsApp *</span>
+              <input name="celular" type="tel" inputmode="numeric" autocomplete="tel" required placeholder="Ej: 300 123 4567"></label>
+            <label class="field"><span>Cédula</span>
+              <input name="cedula" inputmode="numeric" placeholder="Opcional"></label>
+            <label class="field"><span>Correo</span>
+              <input name="correo" type="email" autocomplete="email" placeholder="Opcional"></label>
+          </div>
+
+          <fieldset class="field">
+            <legend>Entrega *</legend>
+            <div class="radio-row" data-delivery></div>
+          </fieldset>
+
+          <div class="grid-2">
+            <label class="field"><span>Ciudad *</span>
+              <input name="ciudad" autocomplete="address-level2" required placeholder="Ej: Bogotá"></label>
+            <label class="field"><span>Departamento *</span>
+              <input name="departamento" autocomplete="address-level1" required placeholder="Ej: Cundinamarca"></label>
+            <label class="field field--full" data-address-field><span>Dirección *</span>
+              <input name="direccion" autocomplete="street-address" required placeholder="Calle, número, barrio, apto"></label>
+          </div>
+
+          <label class="field"><span>Método de pago *</span>
+            <select name="pago" required data-payments></select></label>
+
+          <label class="field"><span>Notas</span>
+            <textarea name="notas" rows="2" placeholder="Ej: horario de entrega, preguntas…"></textarea></label>
+
+          <p class="form-error" data-form-error role="alert"></p>
+
+          <button type="submit" class="btn btn--wa btn--lg btn--block">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+            Enviar pedido por WhatsApp
+          </button>
+        </form>
+      </div>
+
+      <div data-order-step="done" hidden>
+        <div class="done">
+          <div class="done__icon">✓</div>
+          <h2>¡Pedido generado!</h2>
+          <p class="tenue">Tu número de orden es</p>
+          <p class="done__id" data-order-id></p>
+          <p class="tenue small">Si WhatsApp no se abrió automáticamente, toca el botón y envía el mensaje para confirmar tu pedido.</p>
+          <a class="btn btn--wa btn--lg btn--block" data-order-link target="_blank" rel="noopener">Abrir WhatsApp</a>
+          <button class="btn btn--outline btn--block" data-close-order>Volver a la tienda</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Iconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.24 8.24 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+  </svg>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
